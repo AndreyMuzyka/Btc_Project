@@ -1,0 +1,621 @@
+﻿@model Btc.Modeles.TotalUnionDto
+@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    .col-padding {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    .form-control {
+        max-height: 25px;
+    }
+
+    label.fontSize {
+        font-size: 12px;
+    }
+</style>
+@using (Html.BeginForm())
+{
+    <div class="row">
+    <div class="row">
+        <div class="col-xs-1">
+            <input type="submit" value="Старт" class="btn btn-primary btn-group-justified" style="padding-left: 15px;"/>
+        </div>
+        <div class="col-xs-2">
+            @Html.TextBoxFor(m => m.Volume, new {@class = "form-control btn-lg"})
+        </div>
+    </div>
+    <div class="row">
+
+    <div class="col-xs-9">
+    <!-- **********************Периоды********************************-->
+    <div class="row">
+        <div class="col-xs-2">
+            @Html.Label("Период")
+        </div>
+        <div class="col-xs-2 col-padding">
+            <div class="col-xs-4 col-padding" style="background-color: aquamarine">1</div>
+            <div class="col-xs-4 col-padding" style="background-color: bisque">2</div>
+            <div class="col-xs-4 col-padding" style="background-color: azure"> 3</div>
+        </div>
+        <div class="col-xs-2 col-padding">
+            <div class="col-xs-4 col-padding" style="background-color: aquamarine">4</div>
+            <div class="col-xs-4 col-padding" style="background-color: bisque">5</div>
+            <div class="col-xs-4 col-padding" style="background-color: azure"> 6</div>
+        </div>
+        <div class="col-xs-2 col-padding">
+            <div class="col-xs-4 col-padding" style="background-color: aquamarine">7</div>
+            <div class="col-xs-4 col-padding" style="background-color: bisque"> 8</div>
+            <div class="col-xs-4 col-padding" style="background-color: azure"> 9</div>
+        </div>
+        <div class="col-xs-2 col-padding">
+            <div class="col-xs-4 col-padding" style="background-color: aquamarine">10</div>
+            <div class="col-xs-4 col-padding" style="background-color: bisque">11</div>
+            <div class="col-xs-4 col-padding" style="background-color: azure"> 12</div>
+        </div>
+        <div class="col-xs-2 col-padding">
+            <div class="col-xs-4 col-padding" style="background-color: aquamarine">13</div>
+            <div class="col-xs-4 col-padding" style="background-color: bisque">14</div>
+            <div c lass="col-xs-4 col-padding" style="background-color: azure">15</div>
+        </div>
+    </div>
+    <!-- **********************Выбор времени********************************-->
+    <div class="row">
+        <div class="col-xs-2">
+            @Html.Label("Выбор времени")
+        </div>
+        <div class="col-xs-2 col-padding">
+            <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                @Html.DropDownListFor(m => m.PeriodOne.CurrentTimeType, Model.PeriodOne.TimeTipes, new {@class = "form-control btn-xs"})
+            </div>
+            <div class="col-xs-4 col-padding" style="background-color: bisque">
+                @Html.DropDownListFor(m => m.PeriodTwo.CurrentTimeType, Model.PeriodTwo.TimeTipes, new {@class = "form-control btn-xs"})
+            </div>
+            <div class="col-xs-4 col-padding" style="background-color: azure">
+                @Html.DropDownListFor(m => m.PeriodOne.CurrentTimeType, Model.PeriodOne.TimeTipes, new {@class = "form-control btn-xs"})
+            </div>
+        </div>
+        <div class="col-xs-2 col-padding">
+            <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                @Html.DropDownListFor(m => m.PeriodOne.CurrentTimeType, Model.PeriodOne.TimeTipes, new {@class = "form-control btn-xs"})
+            </div>
+            <div class="col-xs-4 col-padding" style="background-color: bisque">
+                @Html.DropDownListFor(m => m.PeriodOne.CurrentTimeType, Model.PeriodOne.TimeTipes, new {@class = "form-control btn-xs"})
+            </div>
+            <div class="col-xs-4 col-padding" style="background-color: azure">
+                @Html.DropDownListFor(m => m.PeriodOne.CurrentTimeType, Model.PeriodOne.TimeTipes, new {@class = "form-control btn-xs"})
+            </div>
+        </div>
+        <div class="col-xs-2 col-padding">
+            <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                @Html.DropDownListFor(m => m.PeriodOne.CurrentTimeType, Model.PeriodOne.TimeTipes, new {@class = "form-control btn-xs"})
+            </div>
+            <div class="col-xs-4 col-padding" style="background-color: bisque">
+                @Html.DropDownListFor(m => m.PeriodOne.CurrentTimeType, Model.PeriodOne.TimeTipes, new {@class = "form-control btn-xs"})
+            </div>
+            <div class="col-xs-4 col-padding" style="background-color: azure">
+                @Html.DropDownListFor(m => m.PeriodOne.CurrentTimeType, Model.PeriodOne.TimeTipes, new {@class = "form-control btn-xs"})
+            </div>
+        </div>
+        <div class="col-xs-2 col-padding">
+            <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                @Html.DropDownListFor(m => m.PeriodOne.CurrentTimeType, Model.PeriodOne.TimeTipes, new {@class = "form-control btn-xs"})
+            </div>
+            <div class="col-xs-4 col-padding" style="background-color: bisque">
+                @Html.DropDownListFor(m => m.PeriodOne.CurrentTimeType, Model.PeriodOne.TimeTipes, new {@class = "form-control btn-xs"})
+            </div>
+            <div class="col-xs-4 col-padding" style="background-color: azure">
+                @Html.DropDownListFor(m => m.PeriodOne.CurrentTimeType, Model.PeriodOne.TimeTipes, new {@class = "form-control btn-xs"})
+            </div>
+        </div>
+        <div class="col-xs-2 col-padding">
+            <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                @Html.DropDownListFor(m => m.PeriodOne.CurrentTimeType, Model.PeriodOne.TimeTipes, new {@class = "form-control btn-xs"})
+            </div>
+            <div class="col-xs-4 col-padding" style="background-color: bisque">
+                @Html.DropDownListFor(m => m.PeriodOne.CurrentTimeType, Model.PeriodOne.TimeTipes, new {@class = "form-control btn-xs"})
+            </div>
+            <div class="col-xs-4 col-padding" style="background-color: azure">
+                @Html.DropDownListFor(m => m.PeriodOne.CurrentTimeType, Model.PeriodOne.TimeTipes, new {@class = "form-control btn-xs"})
+            </div>
+        </div>
+    </div>
+  <!-- **********************Ввод данных********************************-->
+        <div class="row">
+            <div class="col-xs-2">
+                @Html.Label("Ввод данных")
+            </div>
+            <div class="col-xs-2 col-padding">
+                <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                    @Html.TextBoxFor(m => m.PeriodOne.CurrentTimeValue, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: bisque">
+                    @Html.TextBoxFor(m => m.PeriodTwo.CurrentTimeValue, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: azure">
+                    @Html.TextBoxFor(m => m.PeriodOne.CurrentTimeValue, new { @class = "form-control btn-xs" })
+                </div>
+            </div>
+            <div class="col-xs-2 col-padding">
+                <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                    @Html.TextBoxFor(m => m.PeriodOne.CurrentTimeValue, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: bisque">
+                    @Html.TextBoxFor(m => m.PeriodOne.CurrentTimeValue, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: azure">
+                    @Html.TextBoxFor(m => m.PeriodOne.CurrentTimeValue, new { @class = "form-control btn-xs" })
+                </div>
+            </div>
+            <div class="col-xs-2 col-padding">
+                <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                    @Html.TextBoxFor(m => m.PeriodOne.CurrentTimeValue, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: bisque">
+                    @Html.TextBoxFor(m => m.PeriodOne.CurrentTimeValue, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: azure">
+                    @Html.TextBoxFor(m => m.PeriodOne.CurrentTimeValue, new { @class = "form-control btn-xs" })
+                </div>
+            </div>
+            <div class="col-xs-2 col-padding">
+                <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                    @Html.TextBoxFor(m => m.PeriodOne.CurrentTimeValue, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: bisque">
+                    @Html.TextBoxFor(m => m.PeriodOne.CurrentTimeValue, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: azure">
+                    @Html.TextBoxFor(m => m.PeriodOne.CurrentTimeValue, new { @class = "form-control btn-xs" })
+                </div>
+            </div>
+            <div class="col-xs-2 col-padding">
+                <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                    @Html.TextBoxFor(m => m.PeriodOne.CurrentTimeValue, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: bisque">
+                    @Html.TextBoxFor(m => m.PeriodOne.CurrentTimeValue, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: azure">
+                    @Html.TextBoxFor(m => m.PeriodOne.CurrentTimeValue, new { @class = "form-control btn-xs" })
+                </div>
+            </div>
+        </div>
+   @*    <!-- **********************Ввод градиента********************************-->
+        <div class="row">
+            <div class="col-xs-2">
+                @Html.Label("Ввод градиента")
+            </div>
+            <div class="col-xs-2 col-padding">
+                <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                    @Html.TextBoxFor(m => m.PeriodOne.Gradient, new {@class = "form-control btn-xs"})
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: bisque">
+                    @Html.TextBoxFor(m => m.PeriodTwo.Gradient, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: azure">
+                    @Html.TextBoxFor(m => m.PeriodOne.Gradient, new { @class = "form-control btn-xs" })
+                </div>
+            </div>
+            <div class="col-xs-2 col-padding">
+                <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                    @Html.TextBoxFor(m => m.PeriodOne.Gradient, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: bisque">
+                    @Html.TextBoxFor(m => m.PeriodOne.Gradient, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: azure">
+                    @Html.TextBoxFor(m => m.PeriodOne.Gradient, new { @class = "form-control btn-xs" })
+                </div>
+            </div>
+            <div class="col-xs-2 col-padding">
+                <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                    @Html.TextBoxFor(m => m.PeriodOne.Gradient, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: bisque">
+                    @Html.TextBoxFor(m => m.PeriodOne.Gradient, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: azure">
+                    @Html.TextBoxFor(m => m.PeriodOne.Gradient, new { @class = "form-control btn-xs" })
+                </div>
+            </div>
+            <div class="col-xs-2 col-padding">
+                <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                    @Html.TextBoxFor(m => m.PeriodOne.Gradient, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: bisque">
+                    @Html.TextBoxFor(m => m.PeriodOne.Gradient, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: azure">
+                    @Html.TextBoxFor(m => m.PeriodOne.Gradient, new { @class = "form-control btn-xs" })
+                </div>
+            </div>
+            <div class="col-xs-2 col-padding">
+                <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                    @Html.TextBoxFor(m => m.PeriodOne.Gradient, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: bisque">
+                    @Html.TextBoxFor(m => m.PeriodOne.Gradient, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: azure">
+                    @Html.TextBoxFor(m => m.PeriodOne.Gradient, new { @class = "form-control btn-xs" })
+                </div>
+            </div>
+        </div>
+    <!-- **********************Выбор цвета заливки********************************-->
+        <div class="row">
+            <div class="col-xs-2">
+                @Html.Label("Выбор цвета заливки")
+            </div>
+            <div class="col-xs-2 col-padding">
+                <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                    @Html.DropDownList("Выберите заливку", new List<SelectListItem>
+                {
+                    new SelectListItem
+                    {
+                        Text = "Red", Value = "1"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Green", Value = "2"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Blue", Value = "3"
+                    }
+
+                }, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: bisque">
+                    @Html.DropDownList("Выберите заливку", new List<SelectListItem>
+                {
+                    new SelectListItem
+                    {
+                        Text = "Red", Value = "1"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Green", Value = "2"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Blue", Value = "3"
+                    }
+
+                }, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: azure">
+                    @Html.DropDownList("Выберите заливку", new List<SelectListItem>
+                {
+                    new SelectListItem
+                    {
+                        Text = "Red", Value = "1"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Green", Value = "2"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Blue", Value = "3"
+                    }
+
+                }, new { @class = "form-control btn-xs" })
+                </div>
+            </div>
+            <div class="col-xs-2 col-padding">
+                <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                    @Html.DropDownList("Выберите заливку", new List<SelectListItem>
+                {
+                    new SelectListItem
+                    {
+                        Text = "Red", Value = "1"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Green", Value = "2"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Blue", Value = "3"
+                    }
+
+                }, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: bisque">
+                    @Html.DropDownList("Выберите заливку", new List<SelectListItem>
+                {
+                    new SelectListItem
+                    {
+                        Text = "Red", Value = "1"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Green", Value = "2"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Blue", Value = "3"
+                    }
+
+                }, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: azure">
+                    @Html.DropDownList("Выберите заливку", new List<SelectListItem>
+                {
+                    new SelectListItem
+                    {
+                        Text = "Red", Value = "1"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Green", Value = "2"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Blue", Value = "3"
+                    }
+
+                }, new { @class = "form-control btn-xs" })
+                </div>
+            </div>
+            <div class="col-xs-2 col-padding">
+                <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                    @Html.DropDownList("Выберите заливку", new List<SelectListItem>
+                {
+                    new SelectListItem
+                    {
+                        Text = "Red", Value = "1"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Green", Value = "2"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Blue", Value = "3"
+                    }
+
+                }, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: bisque">
+                    @Html.DropDownList("Выберите заливку", new List<SelectListItem>
+                {
+                    new SelectListItem
+                    {
+                        Text = "Red", Value = "1"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Green", Value = "2"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Blue", Value = "3"
+                    }
+
+                }, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: azure">
+                    @Html.DropDownList("Выберите заливку", new List<SelectListItem>
+                {
+                    new SelectListItem
+                    {
+                        Text = "Red", Value = "1"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Green", Value = "2"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Blue", Value = "3"
+                    }
+
+                }, new { @class = "form-control btn-xs" })
+                </div>
+            </div>
+            <div class="col-xs-2 col-padding">
+                <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                    @Html.DropDownList("Выберите заливку", new List<SelectListItem>
+                {
+                    new SelectListItem
+                    {
+                        Text = "Red", Value = "1"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Green", Value = "2"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Blue", Value = "3"
+                    }
+
+                }, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: bisque">
+                    @Html.DropDownList("Выберите заливку", new List<SelectListItem>
+                {
+                    new SelectListItem
+                    {
+                        Text = "Red", Value = "1"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Green", Value = "2"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Blue", Value = "3"
+                    }
+
+                }, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: azure">
+                    @Html.DropDownList("Выберите заливку", new List<SelectListItem>
+                {
+                    new SelectListItem
+                    {
+                        Text = "Red", Value = "1"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Green", Value = "2"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Blue", Value = "3"
+                    }
+
+                }, new { @class = "form-control btn-xs" })
+                </div>
+            </div>
+            <div class="col-xs-2 col-padding">
+                <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                    @Html.DropDownList("Выберите заливку", new List<SelectListItem>
+                {
+                    new SelectListItem
+                    {
+                        Text = "Red", Value = "1"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Green", Value = "2"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Blue", Value = "3"
+                    }
+
+                }, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: bisque">
+                    @Html.DropDownList("Выберите заливку", new List<SelectListItem>
+                {
+                    new SelectListItem
+                    {
+                        Text = "Red", Value = "1"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Green", Value = "2"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Blue", Value = "3"
+                    }
+
+                }, new { @class = "form-control btn-xs" })
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: azure">
+                    @Html.DropDownList("Выберите заливку", new List<SelectListItem>
+                {
+                    new SelectListItem
+                    {
+                        Text = "Red", Value = "1"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Green", Value = "2"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "Blue", Value = "3"
+                    }
+
+                }, new { @class = "form-control btn-xs" })
+                </div>
+            </div>
+        </div>
+        <!-- **********************Звуковое оповещение********************************-->
+        <div class="row">
+            <div class="col-xs-2">
+                @Html.Label("Звуковое оповещение")
+            </div>
+            <div class="col-xs-2 col-padding">
+                <div class="col-xs-4 col-padding" style="background-color: aquamarine; font-size: 12px">
+                    <label class="fontSize">@Html.CheckBox("Вкл/выкл", false, new {@class="btn-xs"})Вкл/выкл</label>
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: bisque">
+                    <label class="fontSize">@Html.CheckBox("Вкл/выкл", false, new { @class = "btn-xs" })Вкл/выкл</label>
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: azure">
+                    <label class="fontSize">@Html.CheckBox("Вкл/выкл", false, new {@class="btn-xs"})Вкл/выкл</label>
+                </div>
+            </div>
+            <div class="col-xs-2 col-padding">
+                <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                    <label class="fontSize">@Html.CheckBox("Вкл/выкл", false, new { @class = "btn-xs" })Вкл/выкл</label>
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: bisque">
+                    <label class="fontSize">@Html.CheckBox("Вкл/выкл", false, new {@class="btn-xs"})Вкл/выкл</label>
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: azure">
+                    <label class="fontSize">@Html.CheckBox("Вкл/выкл", false, new {@class="btn-xs"})Вкл/выкл</label>
+                </div>
+            </div>
+            <div class="col-xs-2 col-padding">
+                <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                    <label class="fontSize">@Html.CheckBox("Вкл/выкл", false, new { @class = "btn-xs" })Вкл/выкл</label>
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: bisque">
+                    <label class="fontSize">@Html.CheckBox("Вкл/выкл", false, new { @class = "btn-xs" })Вкл/выкл</label>
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: azure">
+                    <label class="fontSize">@Html.CheckBox("Вкл/выкл", false, new {@class="btn-xs"})Вкл/выкл</label>
+                </div>
+            </div>
+            <div class="col-xs-2 col-padding">
+                <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                    <label class="fontSize">@Html.CheckBox("Вкл/выкл", false, new { @class = "btn-xs" })Вкл/выкл</label>
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: bisque">
+                    <label class="fontSize">@Html.CheckBox("Вкл/выкл", false, new { @class = "btn-xs" })Вкл/выкл</label>
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: azure">
+                    <label class="fontSize">@Html.CheckBox("Вкл/выкл", false, new { @class = "btn-xs" })Вкл/выкл</label>
+                </div>
+            </div>
+            <div class="col-xs-2 col-padding">
+                <div class="col-xs-4 col-padding" style="background-color: aquamarine">
+                    <label class="fontSize">@Html.CheckBox("Вкл/выкл", false, new {@class="btn-xs"})Вкл/выкл</label>
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: bisque">
+                    <label class="fontSize">@Html.CheckBox("Вкл/выкл", false, new { @class = "btn-xs" })Вкл/выкл</label>
+                </div>
+                <div class="col-xs-4 col-padding" style="background-color: azure">
+                    <label class="fontSize">@Html.CheckBox("Вкл/выкл", false, new {@class="btn-xs"})Вкл/выкл</label>
+                </div>
+            </div>
+        </div>*@
+
+    </div>
+    <div class="col-xs-3 col-padding" style="background-color: aqua">
+        <table class="table table-bordered fontSize">
+            <thead>
+            <tr>
+                <th>Пара</th>
+                <th>Градиент</th>
+                <th>Период</th>
+                <th>Дата</th>
+            </tr>
+            </thead>
+            <tbody>
+                @foreach (var element in Model.Results)
+                {
+                    <tr>
+                        <td>@element.MarketType</td>
+                        <td>@element.Gradient.ToString()</td>
+                        <td>@element.Period</td>
+                        <td>@element.CalculateDate.ToString()</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    </div>
+    </div>
+}
